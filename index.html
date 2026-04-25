@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python School</title>
+    <style>
+        .main{
+            background-color: #0C3059;
+            color: #F09A3E;
+            padding: 10px;
+        }
+        .space{
+            background-color: #F09A3E;
+        }
+        .sc{
+            background-color: red;
+            color: white;
+        }
+        .cam{
+            width: 500px;
+        
+        }
+        .boxi {
+  position: relative;
+  left: 300px;
+  
+  background:#F7D7AE ;
+  padding: 15px;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+  transition: 0.3s; /* smooth effect */
+}
+
+/* Hover effect */
+.boxi:hover {
+  background:#F0AD56 ;
+  color: white;
+  transform: scale(1.3);
+  transition: 2s;
+}
+.boxii {
+  position: relative;
+  top: 50px;
+  left: 300px;
+  background:#F7D7AE ;
+  padding: 15px;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+  transition: 0.3s; /* smooth effect */
+  
+}
+
+/* Hover effect */
+.boxii:hover {
+  background:#F0AD56 ;
+  color: white;
+  transform: scale(1.3);
+  transition: 2s;
+  
+}
+.boxiii {
+  position: relative;
+  left: 300px;
+  top:50px;
+  background:#F7D7AE ;
+  padding: 15px;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+  transition: 0.3s; /* smooth effect */
+  margin-top:20px ;
+}
+
+/* Hover effect */
+.boxiii:hover {
+  background:#F0AD56 ;
+  color: white;
+  transform: scale(1.3);
+  transition: 2s;
+}
+#menu-toggle {
+  display: none;
+}
+
+/* Navbar top */
+.navbar {
+  background: transparent;
+  color: white;
+  padding: 15px;
+  font-size: 20px;
+}
+
+/* Hamburger icon */
+.menu-icon {
+  font-size: 25px;
+  cursor: pointer;
+  color:black;
+}
+
+/* Side menu */
+.menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background: black;
+  color: white;
+  padding-top: 60px;
+  transition: 0.3s;
+}
+
+/* Menu links */
+.menu a {
+  display: block;
+  padding: 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  background: orange;
+}
+
+/* Show menu when checked */
+#menu-toggle:checked ~ .menu {
+  left: 0;
+}
+
+/* Close button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* Pages */
+.page {
+  display: none;
+  padding: 20px;
+}
+
+.page:target {
+  display: block;
+}
+
+body:not(:has(:target)) #home {
+  display: block;
+}
+img { max-width: 100%; height: auto; }
+.prin:hover{
+  transform: translateX(300px); transition: 2s;
+}
+.gero {
+  background: #FDF8F2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  
+  gap: 30px;
+}
+
+/* IMAGE LEFT */
+.gero img {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.teach{
+  box-shadow: 0 4px 8px;
+  border-radius:10px;
+  padding:20px;
+  width: 300px;
+  margin-top: 20px;
+  
+}
+.teach:hover{
+  transform: translateX(300px); transition: 2s;
+}
+.teachi{
+  box-shadow: 0 4px 8px;
+  border-radius:10px;
+  padding:20px;
+  width: 300px;
+  margin-left: 300px;}
+  
+  .footer {
+  background: linear-gradient(to right, #0C3059, #1f4f8b);
+  color: white;
+  padding: 40px 20px;
+}
+
+/* Layout */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* Columns */
+.footer-col {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Links */
+.footer-col a {
+  display: block;
+  color: #F09A3E;
+  text-decoration: none;
+  margin: 5px 0;
+}
+
+.footer-col a:hover {
+  text-decoration: underline;
+}
+
+/* Bottom text */
+.copy {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #ccc;
+}
+.whatsapp, .call {
+      position: fixed;
+      bottom: 20px;
+      
+      padding: 12px;
+      border-radius: 50%;
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+.whatsapp {
+      right: 15px;
+      background: #25D366;
+    }
+
+    .call {
+    right: 60px;
+    background: #007BFF;
+    }
+
+
+
+        
+    </style>
+</head>
+<body>
+    <input type="checkbox" id="menu-toggle">
+
+<!-- Navbar -->
+<div class="navbar">
+  <label for="menu-toggle" class="menu-icon">☰</label>
+</div>
+
+<!-- Side Menu -->
+<div class="menu">
+  <label for="menu-toggle" class="close">✖</label>
+
+  <a href="#">Home</a>
+  <a href="#Principal's-Desk">Principal's-Desk</a>
+  <a href="#Best-Teachers">Best-Teachers</a>
+  <a href="#gallery">Gallery</a>
+</div>
+
+<!-- Pages -->
+
+
+<div id="Principal's-Desk" class="page">
+    <div style="padding: 10px;" class="space">
+
+    </div>
+    <div class="main">
+        <h1 style="text-align: center;">Python School malda</h1>
+        <p style="text-align: center;">Come and set your childs future</p>
+    </div>
+    <div class="gero">
+    <img class="right" src="https://i.postimg.cc/vZSgPpF3/IMG-20260424-WA0001.jpg">
+    <h1>Let’s children discover the joy of learning</h1>
+    <p>Modern education with smart classrooms and activities.</p>
+    
+    </div>
+    <div class="sc">
+    <h2><marquee behavior="scroll" direction="left">Python School malda</marquee></h2>
+    </div>
+    <h1 style="color: #270c59;text-align: center;">From the Principal's Desk :</h1>
+    <div class="prin">
+  <img style="width: 300px;" src="https://i.postimg.cc/Pr1639Tz/20260403-131031(1).jpg">
+  </div>
+  <h1 style="color: #EE9A3F;">Ranojoy Das</h1>
+  <h2 style="color:#0bca24;"><i>Pricipal of Python School malda</i></h2>
+  <h3 style="color:#52575E;">I believe that there is a big difference between cramming up facts and learning them so that they can be applied in productive ways. At Usha Martin School, we try to work towards holistic development of our students by providing them the tools and experiences that encourage our students to think. The aim is to create empowered minds so that students are able to decide what is good for them, differentiate between right and wrong, choose opportunities that help build them up and enable them to live in harmony with all existence. As the Principal, I am delighted that the school's values align with my own personal values, including the importance of trust, respect, innovation and a sense of community.
+
+I must say that as the principal of this school, I feel honoured and privileged to be part of an educational institution where every stakeholder is a learner and every day is an opportunity to learn and discover. We look at ourselves as a community of learners, where everyone learns including our teachers, parents and staff.
+
+I believe in upholding high standards with an absolute commitment to strive to understand and improve the educational process, using team strategies, while wholly concentrating on student achievement. Our staff fruitfully employs two diverse strategies that are of Love and Logic to foster a positive learning environment for all our students. Love and Logic may seem like two contrasting forces. While love helps nurture trusting relationships, where students feel respected, appreciated and loved by the teachers, logic helps develop in students' personal responsibility, self-control, good decision-making skills, self-confidence, and character building with high moral values.
+
+Your child's learning involves and revolves around an effective partnership between home and school. We know the stronger the partnership is the more your child will benefit. Whilst we know that the information here will give you answers to some of your questions, we also know that learning is social, and in this context, we encourage you to come and speak to us in person for a more detailed perspective. I look forward to working with you as we help create a school where parents are welcome at any time, students are engaged in meaningful learning and the staff members are valued and appreciated for their efforts.
+
+We look forward to your support in this endeavour of ours.
+<br>
+    Thank You</h3>
+    <h2 style="color:#52575E;">Ranojoy Das</h2>
+    <br>
+    <br>
+    <br>
+    <footer class="footer">
+  <div class="footer-container">
+
+    <!-- Left -->
+    <div class="footer-col">
+      <h2>Python School</h2>
+      <p>Empowering Minds, Shaping Futures</p>
+    </div>
+
+    <!-- Middle -->
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <a href="#">Home</a>
+  <a href="#Principal's-Desk">Principal's-Desk</a>
+  <a href="#Best-Teachers">Best-Teachers</a>
+  <a href="#gallery">Gallery</a>
+    </div>
+
+    <!-- Right -->
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <p>📍 Malda, West Bengal</p>
+      <p>📞 +91 8509128260</p>
+      
+    </div>
+
+  </div>
+
+  <p class="copy">© 2026 Python School. All Rights Reserved</p>
+</footer>
+<p style="text-align: center;">Copyright © Python School, Malda 2026. All Rights Reserved
+    
+
+</p>
+<a href="https://wa.me/+918509128260" class="whatsapp">💬</a>
+<a href="tel:+918509128260" class="call">📞</a>
+</div>
+
+<div id="Best-Teachers" class="page">
+  <div style="padding: 10px;" class="space">
+
+    </div>
+    <div class="main">
+        <h1 style="text-align: center;">Python School malda</h1>
+        <p style="text-align: center;">Come and set your childs future</p>
+    </div>
+    <div class="gero">
+    <img class="right" src="https://i.postimg.cc/vZSgPpF3/IMG-20260424-WA0001.jpg">
+    <h1>Let’s children discover the joy of learning</h1>
+    <p>Modern education with smart classrooms and activities.</p>
+    
+    </div>
+    <div class="sc">
+    <h2><marquee behavior="scroll" direction="left">Python School malda</marquee></h2>
+    </div>
+  <div class="teachi">
+    <h1 style="color:#F09A3E;">Our best teachers of the year</h1>
+  </div>
+  <div class="teach">
+    <img src="https://i.postimg.cc/nVXPTRrR/Screenshot-20260425-141140-Chat-GPT(1).jpg">
+    <h2>Mr.Debojit</h2>
+    <p>5 star</p>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div class="teach">
+    <img src="https://i.postimg.cc/LX9n2gYj/Screenshot-20260425-141140-Chat-GPT(2).jpg">
+    <h2>Ms.Parijat</h2>
+    <p>English teacher</p>
+  </div>
+  <div class="teach">
+    <img src="https://i.postimg.cc/LX9n2gYj/Screenshot-20260425-141140-Chat-GPT(2).jpg">
+    <h2>Ms.Afrin</h2>
+    <p>Bengali</p>
+  </div>
+  <div class="teach">
+    <img src="https://i.postimg.cc/LX9n2gYj/Screenshot-20260425-141140-Chat-GPT(2).jpg">
+    <h2>Ms.Moumita</h2>
+    <p>Hindi</p>
+  </div>
+  <div class="teach">
+    <img src="https://i.postimg.cc/nVXPTRrR/Screenshot-20260425-141140-Chat-GPT(1).jpg">
+    <h2>Mr.Bisya</h2>
+    <p>Math</p>
+</div>
+<br>
+<br>
+<br>
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Left -->
+    <div class="footer-col">
+      <h2>Python School</h2>
+      <p>Empowering Minds, Shaping Futures</p>
+    </div>
+
+    <!-- Middle -->
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <a href="#">Home</a>
+  <a href="#Principal's-Desk">Principal's-Desk</a>
+  <a href="#Best-Teachers">Best-Teachers</a>
+  <a href="#gallery">Gallery</a>
+    </div>
+
+    <!-- Right -->
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <p>📍 Malda, West Bengal</p>
+      <p>📞 +91 8509128260</p>
+      
+    </div>
+
+  </div>
+
+  <p class="copy">© 2026 Python School. All Rights Reserved</p>
+</footer>
+<a href="https://wa.me/+918509128260" class="whatsapp">💬</a>
+<a href="tel:+918509128260" class="call">📞</a>
+</div>
+
+<div id="gallery" class="page">
+    <div style="padding: 10px;" class="space">
+
+    </div>
+    <div class="main">
+        <h1 style="text-align: center;">Python School malda</h1>
+        <p style="text-align: center;">Come and set your childs future</p>
+    </div>
+    <div class="gero">
+    <img class="right" src="https://i.postimg.cc/vZSgPpF3/IMG-20260424-WA0001.jpg">
+    <h1>Let’s children discover the joy of learning</h1>
+    <p>Modern education with smart classrooms and activities.</p>
+    
+    </div>
+    <div class="sc">
+    <h2><marquee behavior="scroll" direction="left">Python School malda</marquee></h2>
+    </div>
+  <div class="imgi">
+  <img src="https://i.postimg.cc/LsJSgz1c/IMG-20260421-WA0001.jpg">
+  <h1 style="text-align:center ;color: #EE9A3F;">Class room</h1>
+  <h3>Every class roomcenter is bright and well-ventilated for a comfortable learning experience. Each class is equipped with Learning Corners to provide practical knowledge that enhances the competitive skills of the students.
+
+We have trained teachers focusing primarily on child-adult interaction and developing skills to evolve into an understanding, friendly facilitator rather than a traditional teacher. This customized teacher-training program develops teachers who care for, motivate, engage and challenge their children to achieve</h3>
+<hr>
+</div>
+<img src="https://i.postimg.cc/J0NM4Mkc/IMG-20260421-WA0004.jpg">
+<h1 style="color: #EE9A3F;text-align: center;">Air Conditioned Hostels</h1>
+<h3>Usha Martin School, Malda is equipped with AC Hostel facilities to ensure that your child has the best facilities in the town. The hostel can accommodate the students and has its own Hostel superintendent, Hostel Warden, and residential teacher. Every basic amenity like twenty four hour running water, cafeteria, study room and more is provided in the hostel for ensuring comfortable stay. The hostel schedule is so prepared that it helps to build discipline among the young student as well provide enough fun to make their school days truly memorable.</h3>
+<hr>
+<img src="https://i.postimg.cc/PqSHPSJv/IMG-20260421-WA0003.jpg">
+<h1 style="color: #EE9A3F;text-align: center;">Transport Facilities</h1>
+<h3>Safe and comfortable transportation facilities are provided by the school. Children are picked up and dropped at fixed points within easy reach from their residences.
+
+Children and educators travel together. Each bus has fire prevention equipment, first aid and an attendant as precautionary measures. We take every measure possible to ensure that the children travel to and from school every day in a comfortable and safe manner.</h3>
+<hr>
+<br>
+<br>
+<br>
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Left -->
+    <div class="footer-col">
+      <h2>Python School</h2>
+      <p>Empowering Minds, Shaping Futures</p>
+    </div>
+
+    <!-- Middle -->
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <a href="#">Home</a>
+  <a href="#Principal's-Desk">Principal's-Desk</a>
+  <a href="#Best-Teachers">Best-Teachers</a>
+  <a href="#gallery">Gallery</a>
+    </div>
+
+    <!-- Right -->
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <p>📍 Malda, West Bengal</p>
+      <p>📞 +91 8509128260</p>
+      
+    </div>
+
+  </div>
+
+  <p class="copy">© 2026 Python School. All Rights Reserved</p>
+</footer>
+<a href="https://wa.me/+918509128260" class="whatsapp">💬</a>
+<a href="tel:+918509128260" class="call">📞</a>
+</div>
+
+
+</div>
+<div id="home" class="page">
+
+
+    <div style="padding: 10px;" class="space">
+
+    </div>
+    <div class="main">
+        <h1 style="text-align: center;">Python School malda</h1>
+        <p style="text-align: center;">Come and set your childs future</p>
+    </div>
+    <hr>
+    <div class="gero">
+    <img class="right" src="https://i.postimg.cc/vZSgPpF3/IMG-20260424-WA0001.jpg">
+    <h1>Let’s children discover the joy of learning</h1>
+    <p>Modern education with smart classrooms and activities.</p>
+    
+    </div>
+    
+
+    <div class="sc">
+    <h2><marquee behavior="scroll" direction="left">Python School malda</marquee></h2>
+    </div>
+    <br>
+    <br>
+    <h1 style="color: #F09A3E;text-align: center;">Welcome to Python School, Malda</h1>
+    <p style="text-align: center;">Where Future Leaders Are Nurtured</p>
+    <h3>Python School, Malda is one of the leading CBSE-affiliated English-medium schools in the region, dedicated to nurturing young minds with quality education, modern facilities, and a holistic approach to learning. With a strong emphasis on academic excellence, character development, and real-world skills, we prepare students to become visionary thinkers, confident leaders and socially responsible citizens.
+<br>
+<br>
+At Python school, students enjoy a vibrant learning environment supported by innovative pedagogy, experienced educators, and state-of-the-art infrastructure — from digital classrooms to advanced science labs and enriching co-curricular activities. Join us on a journey of discovery, growth and achievement.</h3>
+<h1 style="color: #270c59;text-align: center;">Python school malda : Empowering Minds, Shaping Futures</h1>
+<div class="boxi">
+  We are VISIONARIES
+</div>
+<div class="boxii">
+  We are PROBLEM SOLVERS
+</div>
+<div class="boxiii">
+  We are Learners
+</div>
+<div class="boxiii">
+  We are leaders
+</div>
+<div class="boxiii">
+  We are dreamers
+</div>
+ <div class="boxiii">
+  We are CO-CREATORS
+</div>
+<div class="boxiii">
+  We are changemakers
+</div>
+<div class="boxiii">
+  We are believers
+</div>
+<div class="boxiii">
+  We are Achievers
+</div>
+<br>
+<br>
+<br>
+<br>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- Left -->
+    <div class="footer-col">
+      <h2>Python School</h2>
+      <p>Empowering Minds, Shaping Futures</p>
+    </div>
+
+    <!-- Middle -->
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <a href="#">Home</a>
+  <a href="#Principal's-Desk">Principal's-Desk</a>
+  <a href="#Best-Teachers">Best-Teachers</a>
+  <a href="#gallery">Gallery</a>
+    </div>
+
+    <!-- Right -->
+    <div class="footer-col">
+      <h3>Contact</h3>
+      <p>📍 Malda, West Bengal</p>
+      <p>📞 +91 8509128260</p>
+      
+    </div>
+
+  </div>
+
+  <p class="copy">© 2026 Python School. All Rights Reserved</p>
+</footer>
+
+<p style="text-align: center;">Copyright © Python School, Malda 2026. All Rights Reserved
+    
+
+</p>
+<a href="https://wa.me/+918509128260" class="whatsapp">💬</a>
+<a href="tel:+918509128260" class="call">📞</a>
+
+
+</div>
+
+</body>
+</html>
